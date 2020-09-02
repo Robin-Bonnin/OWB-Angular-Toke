@@ -1,0 +1,85 @@
+<div class="container">
+  <div class='row'>
+    <div class='col mx-auto'>
+      <h1 class='text-center'>Dashboard</h1>
+    </div>
+  </div>
+  <div class='row'>
+    <div class='col'>
+      <div class="card bg-light mx-auto" *ngIf="authenticatedUser" style="max-width: 16rem;">
+        <div class="card-header">
+          <h5>User card</h5>
+        </div>
+        <div class="card-body">
+          <p class="card-text">Your id is <strong>{{authenticatedUser.cid}}</strong></p>
+          <p class="card-text">Your address is <strong>{{authenticatedUser.addr}}</strong></p>
+          <button mx-auto routerLink="/" routerLinkActive="active">Back to user page</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class='row mt-2'>
+    <div class='col'>
+      <div class="card bg-light mx-auto" *ngIf="authenticatedUser" style="max-width: 16rem;">
+        <div class="card-header">
+          <h5>Admin : Decks</h5>
+        </div>
+        <div class="card-body">
+          <p class="card-text"></p>
+          <p class="card-text"></p>
+          <button class="mx-auto">Create new deck</button>
+          <button class="mx-auto mt-2">Add memento to deck</button>
+        </div>
+      </div>
+    </div>
+    <div class='col'>
+      <div class="card bg-light mx-auto" *ngIf="authenticatedUser" style="max-width: 16rem;">
+        <div class="card-header">
+          <h5>Admin : Mementos</h5>
+        </div>
+        <div class="card-body">
+          <p class="card-text"></p>
+          <p class="card-text"></p>
+          <button class="mx-auto">Create new memento</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class='row mt-2'>
+    <div class='col'>
+      <div class="card bg-light mx-auto " *ngIf="authenticatedUser" style="max-width: 16rem;">
+        <div class="card-header">
+          <h5>Following : NFT Collection</h5>
+        </div>
+        <div class="card-body">
+          <p class="card-text"></p>
+          <p class="card-text"></p>
+        </div>
+      </div>
+    </div>
+    <div class='col'>
+      <div class="card bg-light mx-auto" *ngIf="authenticatedUser" style="max-width: 16rem;">
+        <div class="card-header">
+          <h5>Following : NFT Sale</h5>
+        </div>
+        <div class="card-body">
+          <p class="card-text"></p>
+          <p class="card-text"></p>
+        </div>
+      </div>
+    </div>
+    <div class='col'>
+        <div class="card bg-light mx-auto" *ngIf="authenticatedUser" style="max-width: 16rem;">
+          <div class="card-header">
+            <h5>Customer : Fan points</h5>
+          </div>
+          <div class="card-body">
+            <p class="card-text"></p>
+            <p class="card-text"></p>
+          </div>
+        </div>
+      </div>
+  </div>
+
+</div>

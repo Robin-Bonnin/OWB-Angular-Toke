@@ -14,7 +14,11 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "https": [ "src/app/patch.ts" ],
+      "http": [ "src/app/patch.ts" ],
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,

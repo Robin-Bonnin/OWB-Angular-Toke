@@ -1,1 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+
+body {
+    display: grid;
+    min-height: 100vh;
+    padding: 64;
+    margin: 0;
+  }
+  
+  button {
+    font-size: 24px;
+    padding: 0.25em 1em;
+    margin-right: 1em;
+    cursor: pointer;
+    border-radius: 8px;
+    border: 4px;
+  }
+
+  
+  button:hover {
+    background: darkgrey;
+  }
+  
+  .address {
+    font-weight: 700;
+  }

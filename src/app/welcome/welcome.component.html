@@ -1,0 +1,32 @@
+<body>
+  <div class="container">
+    <div class='row'>
+      <div class='col'>
+        <h1 class='text-center'>Welcome to Toke</h1>
+      </div>
+    </div>
+    <div class='row'>
+      <div class='col'>
+        <div *ngIf="!authenticatedUser" class='text-center'>
+          <button (click)="authenticate()" style="max-width: 18rem;">Login</button>
+          <p> We currently have {{users.length}} users </p>
+        </div>
+        <div class="card bg-light mx-auto " *ngIf="authenticatedUser" style="max-width: 24rem;">
+          <div class="card-header">
+            <h5>User card</h5>
+          </div>
+          <div class="card-body">
+            <p class="card-text">Your id is <strong>{{authenticatedUser.cid}}</strong></p>
+            <p class="card-text">Your address is <strong>{{authenticatedUser.addr}}</strong></p>
+            <button (click)="unauthenticate()">Logout</button>
+            <button routerLink="/dashboard" [state]="authenticatedUser" routerLinkActive="active">Dashboard</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class='row mt-2'>
+      <button class="ml-auto mr-2" (click)="setupAdminAccount()">Setup admin account</button>
+      <button class="mr-auto ml-2">Setup customer account</button>
+    </div>
+  </div>
+</body>
